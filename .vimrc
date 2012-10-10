@@ -22,9 +22,13 @@ set noeol
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
+set undodir=~/.vim/undodir
+" create <FILENAME>.un~ files whenever you edit a file
+set undofile
+"maximum number of changes that can be undone
+set undolevels = 1000
+"maximum number lines to save for undo on a buffer reload
+set undoreload = 10000
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
