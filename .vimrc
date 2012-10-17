@@ -26,9 +26,9 @@ set undodir=~/.vim/undodir
 " create <FILENAME>.un~ files whenever you edit a file
 set undofile
 "maximum number of changes that can be undone
-set undolevels = 1000
+set undolevels=1000
 "maximum number lines to save for undo on a buffer reload
-set undoreload = 10000
+set undoreload=10000
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
