@@ -76,6 +76,18 @@ function! StripWhitespace()
 	call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
+
+" Strip trailing whitespace (,rr)
+function! DeleteEmptyLines()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:g/^$/d
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfunction
+noremap <leader>rr :call DeleteEmptyLines()<CR>
+
+
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
@@ -89,24 +101,24 @@ if version >= 703
   filetype plugin indent on
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
-  
+
   " let Vundle manage Vundle
   Bundle 'gmarik/vundle'
-  
+
   " Numbers.vim
   Bundle "myusuf3/numbers.vim"
   highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
   nmap <C-N><C-N> :set invnumber<CR>
-  
+
   " Command-T
   Bundle 'Command-T'
-  
+
   " Surround
   Bundle 'surround.vim'
-  
+
   " Syntastic: For js make sure you have jshint installed
   Bundle 'Syntastic'
-  
+
   " SnipMate
   Bundle "honza/snipmate-snippets"
   Bundle "garbas/vim-snipmate"
@@ -117,12 +129,12 @@ if version >= 703
   highlight Pmenu ctermbg=238 gui=bold
   highlight PmenuSel ctermbg=yellow ctermfg=black
   filetype plugin on
-  
+
   " Lokaltog/vim-powerline
   Bundle 'Lokaltog/vim-powerline'
   let g:Powerline_symbols = 'fancy'
   set laststatus=2
-  
+
   " Brief help
   " :BundleList          - list configured bundles
   " :BundleInstall(!)    - install(update) bundles
