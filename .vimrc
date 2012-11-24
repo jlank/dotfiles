@@ -44,6 +44,10 @@ set exrc
 set secure
 " Enable syntax highlighting
 syntax on
+" EJS Syntax highlighting
+au BufNewFile,BufRead *.ejs set filetype=js
+au BufNewFile,BufRead *.ejs set filetype=html
+
 " Make tabs as wide as two spaces
 set tabstop=2
 set shiftwidth=2
