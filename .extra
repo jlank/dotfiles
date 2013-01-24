@@ -3,4 +3,4 @@
 . ~/.nvm/nvm.sh
 nvm use default > /dev/null
 
-source /Users/jlank/.rvm/scripts/rvm
+#source /Users/jlank/.rvm/scripts/rvm
