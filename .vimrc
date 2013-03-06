@@ -106,6 +106,9 @@ if version >= 703
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
 
+  " vim-gutter
+  Bundle 'airblade/vim-gitgutter'
+
   " let Vundle manage Vundle
   Bundle 'gmarik/vundle'
 
