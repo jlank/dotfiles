@@ -93,3 +93,9 @@ NETWORKING
 (CC) by-nc, Carles Fenollosa <carles.fenollosa@bsc.es>
 Retrieved from http://mmb.pcb.ub.es/~carlesfe/unix/tricks.txt
 Last modified: jue 07 mar 2013 05:31:49  CET
+
+from HN:
+A lot of people know about "!$" (which is shorthand for !!:$), but that's just the tip of Bash's history expansion. I use these things all the time. One of my favorite keystroke savers is adding :h, the head modifier, to !$. For example:
+    $ cp file.txt /some/annoyingly/deep/target/directory/other.txt
+    $ cd !$:h
+    $ pwd # => /some/annoyingly/deep/target/directory
