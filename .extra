@@ -2,3 +2,5 @@
 
 . ~/.nvm/nvm.sh
 nvm use default > /dev/null
+
+alias fl="forever list"
