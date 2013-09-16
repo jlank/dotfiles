@@ -122,3 +122,13 @@ function unquarantine() {
 		xattr -r -d "$attribute" "$@"
 	done
 }
+
+# strip console color codes
+function stripColors () {
+  sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"
+}
+
+# process grep with colors
+function psgrep() {
+  ps axuf | grep -v grep | grep "$@" -i --color=auto;
+}
