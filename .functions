@@ -12,11 +12,11 @@ if [ $? -eq 0 ]; then
 fi
 
 git_email() {
-  git config user.email || ( [ -n "$EMAIL" ] && echo "$EMAIL" ) || echo "$(id -nu)@$(hostname -f)"
+  git config user.email || echo "no user.email found in ~/.gitconfig"
 }
 
 git_name() {
-  git config user.name || getent passwd $(id -un) | cut -d : -f 5 | cut -d , -f 1
+  git config user.name || echo "no user.name found in ~/.gitconfig"
 }
 
 : ${GIT_AUTHOR_NAME=$(git_name)}
