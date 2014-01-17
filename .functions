@@ -39,6 +39,10 @@ dataurl() {
 	echo "data:image/${1##*.};base64,$(openssl base64 -in "$1")" | tr -d '\n'
 }
 
+gherkin() {
+  /Users/jlank/Scm/lisp/gherkin/gherkin
+}
+
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
 	local port="${1:-8000}"
