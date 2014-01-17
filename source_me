@@ -19,4 +19,4 @@ fi
 # Source some run control files
 bind -f ~/.dotfiles/.inputrc
 export VIMINIT="source ~/.dotfiles/.vimrc"
-export GIT_CONFIG="~/.dotfiles/.gitconfig"
+export GIT_CONFIG="${HOME}/.dotfiles/.gitconfig"

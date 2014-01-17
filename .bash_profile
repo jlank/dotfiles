@@ -39,5 +39,5 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 # add rbenv to path
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH" 2> /dev/null
+eval "$(rbenv init -)" 2> /dev/null
