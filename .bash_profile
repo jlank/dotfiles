@@ -41,3 +41,9 @@ complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book Syst
 # add rbenv to path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export EC2_AMITOOL_HOME=/usr/local/ec2/ec2-ami-tools-1.4.0.9
+export PATH=$EC2_AMITOOL_HOME/bin:$PATH
+export EC2_HOME=/usr/local/ec2/ec2-api-tools-1.6.12.2
+export PATH=$PATH:$EC2_HOME/bin
