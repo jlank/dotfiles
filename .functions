@@ -3,6 +3,10 @@ function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
+function sax() {
+  java -jar ~/bin/saxon9he.jar "$@"
+}
+
 # Use Git’s colored diff when available
 hash git &>/dev/null
 if [ $? -eq 0 ]; then
