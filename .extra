@@ -6,8 +6,3 @@ then
   nvm use default
   alias fl="forever list"
 fi
-
-if [ -a ~/.rbenv/bin/rbenv ]
-then
-  rbenv local 1.9.3-p327
-fi
